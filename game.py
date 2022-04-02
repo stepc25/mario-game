@@ -44,8 +44,9 @@ class Game:
         
     def draw(self): 
         self.screen.fill(self.bg_color)
+        self.gamelevel.drawTiles()
         self.screen.blit(self.background, self.bg.rect)
-        self.gamelevel.draw()
+        self.gamelevel.drawPlayer()
                 
     def run(self):
         # if self.status == 'overworld':
