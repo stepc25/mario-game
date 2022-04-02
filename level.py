@@ -138,14 +138,15 @@ class GameLevel:
             player.on_ceiling = False 
     
     def update(self):
-        self.tiles.update(self.world_shift)
+        #self.tiles.update(self.world_shift)
         self.bg.update(self.world_shift)
         self.player.update()
              
-    def draw(self):
+    def drawTiles(self):
         #level tiles
         self.tiles.draw(self.screen)
         self.scroll_x()
+    def drawPlayer(self):
         #player
         self.horizontal_movement_collision()
         self.vertical_movement_collisoin()
